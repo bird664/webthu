@@ -31,7 +31,7 @@ const updateButtonText = (theme) => {
     if (theme === 'light') {
         button.textContent = 'sáng';
     } else {
-        button.textContent = 'tối';
+        button.textContent = 'be';
     }
 };
 

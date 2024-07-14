@@ -2,16 +2,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("search-input");
     const products = document.querySelectorAll(".cartegory-right-content-item");
-    const searchResults = document.getElementById("search-results");
+    const searchResults = document.getElementById("search-results"); // lấy thẻ dùng hiển thị kết quả
   
     searchInput.addEventListener("input", function () {
-      const searchText = searchInput.value.toLowerCase();
+      const searchText = searchInput.value.toLowerCase(); // chuyển giá trị nhập về chữ thường
       searchResults.innerHTML = "";
   
       if (searchText.length > 0) {
         products.forEach(function (product) {
           const productName = product.querySelector("h1").textContent.toLowerCase();
-          if (productName.includes(searchText)) {
+          if (productName.includes(searchText)) { // khi tên sp chứa giá trị tìm kiếm
             const listItem = document.createElement("li");
             listItem.textContent = product.querySelector("h1").textContent;
             listItem.addEventListener("click", function () {

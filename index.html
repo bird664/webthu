@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/62cc840de8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/cartegory.css">
+    <link rel="stylesheet" href="css/product.css">
+    <link rel="stylesheet" href="css/cart.css">
+    <link rel="stylesheet" href="css/delivery.css">
+    <link rel="stylesheet" href="css/payment.css">
+    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/backtotop.css">
+    <link rel="stylesheet" href="css/light.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo_color.png">
+        </div>
+        <div class="menu">
+            <li><a href="index.html">Trang chủ</a></li>
+            <li><a href="">Sản phẩm</a>
+                <ul class="sub-menu">
+                    <li><a href="">Áo</a>
+                        <ul>
+                            <li><a href="">Áo sơ mi</a></li>
+                            <li><a href="">Áo thun</a></li>
+                            <li><a href="">Áo crop-top</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Quần</a>
+                        <ul>
+                            <li><a href="">Quần jean</a></li>
+                            <li><a href="">Quần lửng</a></li>
+                            <li><a href="">Quần dài</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="cartegory.html">Chân váy</a>
+                        <ul>
+                            <li><a href="">Chân váy chữ A</a></li>
+                            <li><a href="">Chân váy bút chì</a></li>
+                            <li><a href="">Chân váy jenas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Đầm</a>
+                        <ul>
+                            <li><a href="">Váy đầm</a></li>
+                            <li><a href="">Đầm công sở </a></li>
+                            <li><a href="">Đầm voan hoa</a></li>
+                            <li><a href="">Đầm thun</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">Phụ kiện</a>
+                        <ul>
+                            <li><a href="">Đồ lót</a></li>
+                            <li><a href="">Túi/ví</a></li>
+                            <li><a href="">Giày dép</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="">Sale</a></li>
+            <li><a href="">Bộ sưu tập</a>
+                <ul class="sub-menu">
+                    <li><a href="">OCEAN JEWELS</a></li>
+                </ul>
+            </li>
+            <li><a href="">Thông tin</a></li>
+        </div>
+        <div class="others">
+            <li>
+                <input id="searchInput" placeholder="Tìm kiếm" type="text" autocomplete="off">
+                <i class="fas fa-search"></i>
+                <ul id="searchResults" class="search-results"></ul>
+            </li>
+            
+            <li>
+                <a class="fa fa-user" href="admin.html"></a>
+            </li>
+            <li>
+                <a class="fa fa-shopping-bag" href="cart.html"></a>
+            </li>
+        </div>
+    </header>
+    <div class="slider-container">
+        <div class="slider">       
+            <div class="slide"><img src="images/silder1.webp" alt="Slide 1"></div>       
+            <div class="slide"><img src="images/silder2.webp" alt="Slide 2"></div>       
+            <div class="slide"><img src="images/silder3.webp" alt="Slide 3"></div>       
+        </div>        
+        <div class="dot-container">     
+            <span class="dot" onclick="currentSlide(0)"></span> 
+            <span class="dot" onclick="currentSlide(1)"></span>     
+            <span class="dot" onclick="currentSlide(2)"></span>          
+        </div>        
+    </div>
+    <!--------------------------app--------------------->
+    <section class="app-container">
+        <p>Tải ứng dụng</p>
+        <div class="app-google">
+            <img src="images/appstore.png" alt="">
+            <img src="images/googleplay.png" alt="">
+        </div>
+        <p>Nhận bản tin</p>
+        <input type="text" placeholder="Nhập email của bạn...">
+    </section>
+    <!--------------------------footer--------------------->
+    <div class="footer-top">
+        <li>
+            <a href=""><img src="images/dathongbao.png" alt=""></a>
+        </li>
+        <li><a href="">Liên hệ</a></li>
+        <li>
+            <a href="">Tuyển dụng</a>
+        </li>
+        <li>
+            <a href="">Giới thiệu</a>
+        </li>
+        <li>
+            <a href="" class="fab fa-facebook-f"></a>
+            <a href="" class="fab fa-twitter"></a>
+            <a href="" class="fab fa-youtube"></a>
+        </li>
+    </div>
+    <div class="footer-center">
+        <p>Công ty Cổ phần Phúc Linh với số đăng ký kinh doanh: 0123456789<br> Địa chỉ đăng ký: 21 Yên Xá, Tân Triều,
+            Thanh Trì, Hà Nội, Việt Nam - 0234567891<br> Đặt hàng online : <b>0345678912</b>.
+        </p>
+    </div>
+    <div class="footer-bottom">
+        @phuclinh all rights reserved
+    </div>
+ <button id="backToTopBtn" onclick="topFunction()" title="Go to top"><i class="fa-solid fa-arrow-up"></i></button>  
+ <button onclick="toggleTheme()" class="floating-button" id="themeButton">Sáng</button>
+
+</body>
+<script src="js/slider.js"></script>
+<script src="js/cartegory.js"></script>
+<script src="js/product.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/search.js"></script>
+<script src="js/backtotop.js"></script>
+<script src="js/light.js"></script>
+</html>

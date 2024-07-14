@@ -1,0 +1,260 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--main-text-font);
+}
+
+:root {
+    --main-text-font: Arial, Helvetica, sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    height: 70px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background-color: rgb(225, 225, 225, 0.3);
+}
+
+header.sticky {
+    background-color: rgb(255, 255, 255, 1);
+}
+
+header:hover {
+    background-color: rgb(255, 255, 255, 1);
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo img {
+    max-width: 100px;
+    height: auto;
+}
+
+.menu {
+    flex: 3;
+    display: flex;
+}
+
+.menu li {
+    padding: 0 12px;
+    position: relative;
+}
+
+.menu li:hover .sub-menu {
+    visibility: visible;
+    top: 45px;
+}
+
+.sub-menu {
+    position: absolute;
+    width: 150px;
+    border: 1px solid #ccc;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    top: 60px;
+    transition: 0.3s;
+    z-index: 1;
+    background: #fff;
+}
+
+.sub-menu ul {
+    padding-left: 20px;
+}
+
+.sub-menu li a {
+    font-weight: normal!important;
+    font-size: 12px!important;
+}
+
+.menu li a {
+    font-size: 12px;
+    font-weight: bold!important;
+    display: block;
+    line-height: 20px;
+}
+
+.others {
+    flex: 1;
+    display: flex;
+}
+
+.others li {
+    padding: 0 12px;
+    position: relative;
+}
+
+.others li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 50%;
+    background: #ccc;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.others li:first-child {
+    position: relative;
+}
+
+.others li:first-child input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #333;
+    background: transparent;
+    outline: none;
+}
+
+.others li:first-child i {
+    position: absolute;
+    right: 10px;
+}
+/* silder */
+.slider-container {
+width: 100%;
+margin: auto;
+overflow: hidden;
+position: relative;
+}
+.slider {
+display: flex;
+transition: transform 1s ease-in-out;
+}
+.slide {
+min-width: 100%;
+transition: transform 1s ease-in-out, width 1s ease-in-out;
+}
+.dot-container {
+z-index: 5;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+bottom: 1.5em;
+text-align: center;
+background-color: rgba(0, 0, 0, 0.3);
+padding: 5px;
+border-radius: 20px;
+}
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    cursor: pointer;
+}
+.active-dot {
+    background-color: white;
+}
+/*....................app...................*/
+
+.app-container {
+    text-align: center;
+    align-items: center;
+    padding: 150px 0 50px 0;
+}
+
+.app-google {
+    margin: 50px;
+}
+
+.app-google img {
+    height: 50px;
+    cursor: pointer;
+}
+
+.app-container p {
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-size: 17px;
+    color: #000;
+    font-weight: bold;
+}
+
+.app-container input {
+    margin-top: 50px;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding-bottom: 20px;
+    width: 400px;
+    text-align: center;
+    outline: none;
+}
+
+
+/*....................footer...................*/
+
+footer {
+    text-align: center;
+}
+
+.footer-top {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 70px;
+}
+
+.footer-top img {
+    height: 50px;
+}
+
+.footer-top li {
+    padding: 0 12px;
+    position: relative;
+}
+
+.footer-top li::after {
+    content: "";
+    display: block;
+    width: 1px;
+    height: 80%;
+    background: #ccc;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.footer-top li:last-child::after {
+    display: none;
+}
+
+.footer-top li:last-child a {
+    margin: 12px;
+    color: #333;
+}
+
+.footer-center {
+    text-align: center;
+}
+
+.footer-bootom {
+    margin: 20px;
+    text-align: center;
+}

@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
             searchResults.appendChild(listItem);
           }
         });
-      } else {
+      } else { // trả về toàn bộ khi không nhập
         showAllProducts();
       }
     });

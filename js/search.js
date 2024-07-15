@@ -80,11 +80,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   
-    searchInput.addEventListener("input", function () {
+    searchInput.addEventListener("input", function () { 
       const searchText = searchInput.value.toLowerCase();
   
       if (searchText.length === 0) {
-        searchResults.innerHTML = "";
+        searchResults.innerHTML = ""; // xóa kết quả trước đó
       }
     });
   });

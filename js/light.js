@@ -9,9 +9,9 @@ const setTheme = (theme) => {
 
 const toggleTheme = () => {
     const activeTheme = localStorage.getItem('theme');
-    if (activeTheme === 'light') {
+    if (activeTheme === 'light') { // nếu theme là 1 thì hiển thị 2 
         setTheme('dark');
-    } else {
+    } else { // và ngược lại 
         setTheme('light');
     }
 };

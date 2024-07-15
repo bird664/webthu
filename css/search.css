@@ -10,8 +10,8 @@
     overflow-y: auto;
     z-index: 1000;
   }
-  
-  .search-results li {
+  /* bảng kết quả search */
+  .search-results li { 
     padding: 10px;
     cursor: pointer;
   }

@@ -62,9 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
       { name: "CHÂN VÁY CHỮ A PHỐI VIỀN HOA NỔI", url: "product.html" },
     ];
   
-    searchInput.addEventListener("input", function () {
-      const searchText = searchInput.value.toLowerCase();
-      searchResults.innerHTML = "";
+    searchInput.addEventListener("input", function () { // thêm sự kiện tìm kiếm
+      const searchText = searchInput.value.toLowerCase(); // chuyển văn bản về chữ thường 
+      searchResults.innerHTML = ""; // xóa tìm kiếm trước đó
   
       if (searchText.length > 0) {
         const filteredProducts = products.filter((product) => product.name.toLowerCase().includes(searchText));

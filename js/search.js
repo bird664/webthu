@@ -62,15 +62,15 @@ document.addEventListener("DOMContentLoaded", function () {
       { name: "CHÂN VÁY CHỮ A PHỐI VIỀN HOA NỔI", url: "product.html" },
     ];
   
-    searchInput.addEventListener("input", function () {
-      const searchText = searchInput.value.toLowerCase();
-      searchResults.innerHTML = "";
+    searchInput.addEventListener("input", function () { // thêm sự kiện tìm kiếm
+      const searchText = searchInput.value.toLowerCase(); // chuyển văn bản về chữ thường 
+      searchResults.innerHTML = ""; // xóa tìm kiếm trước đó
   
       if (searchText.length > 0) {
         const filteredProducts = products.filter((product) => product.name.toLowerCase().includes(searchText));
   
         filteredProducts.forEach((product) => {
-          const listItem = document.createElement("li");
+          const listItem = document.createElement("li"); // thêm 1 doạn chứa kết quả tìm kiếm
           listItem.textContent = product.name;
           listItem.addEventListener("click", function () {
             window.location.href = product.url; // chuyển đến trang khi click
@@ -80,11 +80,11 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   
-    searchInput.addEventListener("input", function () {
+    searchInput.addEventListener("input", function () { 
       const searchText = searchInput.value.toLowerCase();
   
       if (searchText.length === 0) {
-        searchResults.innerHTML = "";
+        searchResults.innerHTML = ""; // xóa kết quả trước đó
       }
     });
   });

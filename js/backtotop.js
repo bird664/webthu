@@ -11,6 +11,7 @@ function scrollFunction(){
         mybutton.style.display = "none";
     }
 }
+// chỉnh vị trí đẩy lên , chuyển động
 function topFunction(){
     window.scrollTo({
         top:0,

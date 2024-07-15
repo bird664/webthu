@@ -3,15 +3,15 @@ const initialTheme = 'light'; // giá trị mặc định
 
 const setTheme = (theme) => {
     localStorage.setItem('theme', theme); // lưu
-    body.setAttribute('data-theme', theme);
+    body.setAttribute('data-theme', theme); // đặt thuộc tính ' ' cho body
     updateButtonText(theme);
 };
 
 const toggleTheme = () => {
     const activeTheme = localStorage.getItem('theme');
-    if (activeTheme === 'light') {
+    if (activeTheme === 'light') { // nếu theme là 1 thì hiển thị 2 
         setTheme('dark');
-    } else {
+    } else { // và ngược lại 
         setTheme('light');
     }
 };
@@ -27,12 +27,12 @@ const setThemeOnInit = () => {
 };
 
 const updateButtonText = (theme) => {
-    const button = document.getElementById('themeButton');
+    const button = document.getElementById('themeButton'); // lấy tham chiếu tới nút
     if (theme === 'light') {
         button.textContent = 'sáng';
     } else {
-        button.textContent = 'be';
+        button.textContent = 'be'; // văn bản nút bấm
     }
 };
 
-setThemeOnInit();
+setThemeOnInit(); // 

@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const filteredProducts = products.filter((product) => product.name.toLowerCase().includes(searchText));
   
         filteredProducts.forEach((product) => {
-          const listItem = document.createElement("li");
+          const listItem = document.createElement("li"); // thêm 1 doạn chứa kết quả tìm kiếm
           listItem.textContent = product.name;
           listItem.addEventListener("click", function () {
             window.location.href = product.url; // chuyển đến trang khi click

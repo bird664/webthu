@@ -8,7 +8,7 @@
 
 body[data-theme='light'] {
     background-color: var(--light-bg-color);
-    color: var(--light-text-color);
+   
 }
 
 body[data-theme='dark'] {

@@ -1,8 +1,8 @@
-const body = document.querySelector('body');
-const initialTheme = 'light';
+const body = document.querySelector('body'); // lưu trữ tới body
+const initialTheme = 'light'; // giá trị mặc định
 
 const setTheme = (theme) => {
-    localStorage.setItem('theme', theme);
+    localStorage.setItem('theme', theme); // lưu
     body.setAttribute('data-theme', theme);
     updateButtonText(theme);
 };
@@ -15,7 +15,7 @@ const toggleTheme = () => {
         setTheme('light');
     }
 };
-
+// hàm khi refresh
 const setThemeOnInit = () => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {

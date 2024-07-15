@@ -2,16 +2,16 @@
 document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("search-input");
     const products = document.querySelectorAll(".cartegory-right-content-item");
-    const searchResults = document.getElementById("search-results");
+    const searchResults = document.getElementById("search-results"); // lấy thẻ dùng hiển thị kết quả
   
     searchInput.addEventListener("input", function () {
-      const searchText = searchInput.value.toLowerCase();
-      searchResults.innerHTML = "";
+      const searchText = searchInput.value.toLowerCase(); // chuyển giá trị nhập về chữ thường
+      searchResults.innerHTML = ""; // xóa kết quả trước đó
   
       if (searchText.length > 0) {
         products.forEach(function (product) {
           const productName = product.querySelector("h1").textContent.toLowerCase();
-          if (productName.includes(searchText)) {
+          if (productName.includes(searchText)) { // khi tên sp chứa giá trị tìm kiếm
             const listItem = document.createElement("li");
             listItem.textContent = product.querySelector("h1").textContent;
             listItem.addEventListener("click", function () {
@@ -20,21 +20,21 @@ document.addEventListener("DOMContentLoaded", function () {
               searchResults.innerHTML = "";
               filterProducts(searchText);
             });
-            searchResults.appendChild(listItem);
+            searchResults.appendChild(listItem); // thêm kết quả
           }
         });
-      } else {
+      } else { // trả về toàn bộ khi không nhập
         showAllProducts();
       }
     });
-  
+  // hàm lọc sản phẩm
     function filterProducts(searchText) {
       products.forEach(function (product) {
         const productName = product.querySelector("h1").textContent.toLowerCase();
         if (productName.includes(searchText)) {
-          product.style.display = "block";
+          product.style.display = "block"; // hiện sp phù hợp
         } else {
-          product.style.display = "none";
+          product.style.display = "none"; // ẩn sp ko phù hợp
         }
       });
     }
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById("searchInput");
     const searchResults = document.getElementById("searchResults");
-  
+  // danh sách sản phẩm và URL
     const products = [
       { name: "Chân Váy Xếp Ly Cạp Cao Phối Khuy", url: "product.html" },
       { name: "Chân Váy Xếp Ly Dáng Suông", url: "product.html" },
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
           const listItem = document.createElement("li");
           listItem.textContent = product.name;
           listItem.addEventListener("click", function () {
-            window.location.href = product.url;
+            window.location.href = product.url; // chuyển đến trang khi click
           });
           searchResults.appendChild(listItem);
         });

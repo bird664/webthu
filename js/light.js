@@ -28,11 +28,11 @@ const setThemeOnInit = () => {
 
 const updateButtonText = (theme) => {
     const button = document.getElementById('themeButton'); // lấy tham chiếu tới nút
-    if (theme === 'light') {q
+    if (theme === 'light') {
         button.textContent = 'sáng';
     } else {
-        button.textContent = 'be';
+        button.textContent = 'be'; // văn bản nút bấm
     }
 };
 
-setThemeOnInit();
+setThemeOnInit(); // 

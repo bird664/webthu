@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     searchInput.addEventListener("input", function () {
       const searchText = searchInput.value.toLowerCase(); // chuyển giá trị nhập về chữ thường
-      searchResults.innerHTML = "";
+      searchResults.innerHTML = ""; // xóa kết quả trước đó
   
       if (searchText.length > 0) {
         products.forEach(function (product) {

@@ -3,7 +3,7 @@ const initialTheme = 'light'; // giá trị mặc định
 
 const setTheme = (theme) => {
     localStorage.setItem('theme', theme); // lưu
-    body.setAttribute('data-theme', theme);
+    body.setAttribute('data-theme', theme); // đặt thuộc tính ' ' cho body
     updateButtonText(theme);
 };
 
@@ -27,7 +27,7 @@ const setThemeOnInit = () => {
 };
 
 const updateButtonText = (theme) => {
-    const button = document.getElementById('themeButton');
+    const button = document.getElementById('themeButton'); // lấy tham chiếu tới nút
     if (theme === 'light') {
         button.textContent = 'sáng';
     } else {
